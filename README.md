@@ -54,19 +54,21 @@ Let’s now the other interception options AOP provides.
 ```
 Let’s create a simple Aspect with a couple of these variations.
 ```java
-
 @Aspect
 @Configuration
 public class AfterAopAspect {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-    @AfterReturning(value = "execution(* com.in28minutes.springboot.tutorial.basics.example.aop.business.*.*(..))",
-        returning = "result")
-    public void afterReturning(JoinPoint joinPoint, Object result) {
-        logger.info("{} returned with value {}", joinPoint, result);
-    }
-    @After(value = "execution(* com.in28minutes.springboot.tutorial.basics.example.aop.business.*.*(..))")
-    public void after(JoinPoint joinPoint) {
-        logger.info("after execution of {}", joinPoint);
-    }
+
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	//TODO
+	@AfterReturning(value = "execution(* com.srikanth.aop.service.*.*(..))",
+			returning = "result")
+	public void afterReturning(JoinPoint joinPoint, Object result) {
+		logger.info("{} returned with value {}", joinPoint, result);
+	}
+	
+	@After(value = "execution(* com.srikanth.aop.service.*.*(..))")
+	public void after(JoinPoint joinPoint) {
+		logger.info("after execution of {}", joinPoint);
+	}
 }
 ```

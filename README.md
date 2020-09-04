@@ -47,10 +47,11 @@ Let’s spend some time understanding the AOP terminology.
 
 ## Using the @After, @AfterReturning, and @AfterThrowing Advices
 Let’s now the other interception options AOP provides.
-
+```text
 * @After: executed in two situations — when a method executes successfully or it throws an exception.
 * @AfterReturning: executed only when a method executes successfully.
 * @AfterThrowing: executed only when a method throws an exception.
+```
 Let’s create a simple Aspect with a couple of these variations.
 ```java
 

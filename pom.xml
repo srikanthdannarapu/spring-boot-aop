@@ -30,6 +30,8 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
+		<!--spring-boot-starter-aop imports spring-aop and aspectjweaver -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
